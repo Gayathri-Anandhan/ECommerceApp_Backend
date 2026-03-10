@@ -119,7 +119,11 @@
     <version>5.10.2</version>
     <scope>test</scope>
 </dependency>
-		
+<dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <scope>runtime</scope>
+</dependency>
 		<!-- JWT API -->
 <dependency>
     <groupId>io.jsonwebtoken</groupId>
