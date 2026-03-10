@@ -15,11 +15,11 @@ public class CorsConfig {
 
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**") // allow all endpoints
-                        .allowedOrigins("https://e-commerce-app-frontend-xi-nine.vercel.app") // your deployed frontend URL
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // allowed HTTP methods
-                        .allowedHeaders("*") // allow all headers
-                        .allowCredentials(true); // allow sending cookies/auth headers
+                registry.addMapping("/**")
+                        .allowedOrigins("*") // allow all frontends
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                        .allowedHeaders("*")
+                        .allowCredentials(false); // must be false if using *
             }
         };
     }
