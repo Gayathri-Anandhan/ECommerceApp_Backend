@@ -1,13 +1,26 @@
 package com.example.ECommerce.config;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.example.ECommerce.ECommerceApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-@SpringBootApplication
+@Configuration
 public class CorsConfig {
-    public static void main(String[] args) {
-        SpringApplication.run(ECommerceApplication.class, args);
+
+    @Bean
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurer() {
+
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/**") // allow all endpoints
+                        .allowedOrigins("https://e-commerce-app-frontend-3pukpg63w-gayathri-anandhans-projects.vercel.app") // your deployed frontend URL
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // allowed HTTP methods
+                        .allowedHeaders("*") // allow all headers
+                        .allowCredentials(true); // allow sending cookies/auth headers
+            }
+        };
     }
 }
