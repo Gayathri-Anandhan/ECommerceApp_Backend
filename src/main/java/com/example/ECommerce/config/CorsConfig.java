@@ -16,7 +16,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**") // allow all endpoints
-                        .allowedOrigins("https://real-nest-frontend.vercel.app") // your deployed frontend URL
+                        .allowedOrigins("https://e-commerce-app-frontend-3pukpg63w-gayathri-anandhans-projects.vercel.app") // your deployed frontend URL
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // allowed HTTP methods
                         .allowedHeaders("*") // allow all headers
                         .allowCredentials(true); // allow sending cookies/auth headers

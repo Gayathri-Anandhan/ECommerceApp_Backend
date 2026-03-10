@@ -20,7 +20,7 @@ public class ECommerceApplication {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**") // allow all API paths
-                        .allowedOrigins("https://e-commerce-app-frontend-xi-nine.vercel.app") // your frontend URL
+                        .allowedOrigins("https://e-commerce-app-frontend-3pukpg63w-gayathri-anandhans-projects.vercel.app") // your frontend URL
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // allowed HTTP methods
                         .allowedHeaders("*") // allow all headers
                         .allowCredentials(true);
