@@ -15,3 +15,5 @@ RUN ./mvnw clean package -DskipTests
 
 # Run the jar file
 CMD ["java", "-jar", "target/ECommerce-0.0.1-SNAPSHOT.jar"]
+
+EXPOSE 8080
